@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  transition: all .2s ease-out;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto Mono';
+  font-size: 16px;
+}
+
+#sidePanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background-image: url(../images/code.jpg);
+  background-position: center top;
+  background-size: cover;
+  line-height: 1;
+  color: #eee;
+  text-align: right;
+  padding: 1em 2em 2em 2em;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,1+61 */
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1) 61%, rgba(0, 0, 0, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1) 61%, rgba(0, 0, 0, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1) 61%, rgba(0, 0, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+}
+
+main#content {
+  height: 100%;
+  width: 100%;
+  padding-left: 40%;
+}
+
+#mainNav li {
+  display: block;
+}
+#mainNav li.active {
+  border-right: 4px solid white;
+}
+
+/* Typo */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.23;
+}
+
+a,
+a:hover {
+  color: inherit;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.subtitle {
+  font-size: 2em;
+}
+
+.plain {
+  font-size: 1em;
+}
+
+.note {
+  font-size: .875em;
+}
+
+.tx-bold {
+  font-weight: 700;
+}
+
+.tx-medi {
+  font-weight: 500;
+}
+
+.tx-norm {
+  font-weight: 400;
+}
+
+.tx-light {
+  font-weight: 300;
+}
+
+.page {
+  min-height: 100%;
+  padding: 3em 1em 3em 2em;
+}
+
+.zone {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.element {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.piece {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+
+/* Modules */
+
+#projects {
+  li {
+    width: 50%;
+    padding-right: 1em;
+    float: left;
+  }
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+.project {
+  position: relative;
+  margin-bottom: 1em;
+  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, .3);
+  &_img {
+    height: 15em;
+    display: block;
+    background-color: #ccc;
+    overflow: hidden;
+    img {
+      
+      width: 100%;
+      height: auto;
+      
+      vertical-align: top;
+    }
+  }
+  &_content {
+    padding-top: .1px;
+    padding-left: 1.25em;
+    height: 3.5em;
+  }
+  &_link {
+    // transition: all .2s ease-out .4s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    display: block;
+    line-height: 3.5em;
+    width: 3.5em;
+    text-align: center;
+    background-color: transparent;
+    a {
+      text-decoration: none;
+    }
+  }
+  &:hover &_link {
+    opacity: 1;
+    background-color: rgba(0,0,0, .1);
+    cursor: pointer;
+  }
+  &:hover {
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, .3),0px 5px 0px 2px rgba(0, 0, 0, .3);
+  }
+}
+a.mdi {
+  text-decoration: none;
+}
+.mdi.bigger {
+  font-size: 1.5em;
+}
+a.mdi-facebook-box:hover {
+  color: #3b5998;
+}
+a.mdi-github-box:hover {
+  color: #8926d5;
+}
