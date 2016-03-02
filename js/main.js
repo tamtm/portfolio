@@ -35,5 +35,5 @@ $(function() {
       $("#contact_link").addClass('active');
     };
     console.log('aaaa')
-  });*/
-});
+  });
+});*/
