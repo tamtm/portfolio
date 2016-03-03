@@ -9,7 +9,16 @@ body {
   font-family: 'Roboto Mono';
   font-size: 16px;
 }
-
+@media screen and (max-width: 991px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  html, body {
+    font-size: 12px;
+  }
+}
 #sidePanel {
   position: fixed;
   top: 0;
@@ -139,7 +148,12 @@ a:hover {
     display: block;
   }
 }
-
+@media screen and (max-width: 1024px) {
+  #projects li {
+    width: 90%;
+    padding-bottom: 1em
+  }
+}
 .project {
   position: relative;
   margin-bottom: 1em;
@@ -162,6 +176,7 @@ a:hover {
     padding-top: .1px;
     padding-left: 1.25em;
     height: 3.5em;
+    background-color: #efefef;
   }
   &_link {
     // transition: all .2s ease-out .4s;
